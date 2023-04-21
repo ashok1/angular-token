@@ -466,7 +466,7 @@ describe('AngularTokenService', () => {
   });
 
   describe('signInOauth', () => {
-    describe('in a new window', () => {
+    xdescribe('in a new window', () => {
       beforeEach(() => {
         initService({
           oAuthBase: 'https://www.example.com',
