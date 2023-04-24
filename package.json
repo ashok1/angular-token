@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:lib": "rm -rf ./dist && ng-packagr -p ./projects/angular-token/ng-package.json",
+    "build:release": "npm run build:lib && tar -czvf ./dist/angular-token.tar.gz -C ./dist/angular-token .",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test:lib": "ng test angular-token"
