@@ -31,7 +31,6 @@ import {
   TokenInAppBrowser,
 } from './angular-token.model';
 
-import { AuthGuard, IsLoginGuard } from './angular-guard';
  @Injectable({
   providedIn: 'root',
 })
@@ -170,14 +169,6 @@ export class AngularTokenService {
   fetchSignInRedirect(): string | undefined {
     return this.options.signInRedirect;
   } 
-
-  authGuard(){
-    AuthGuard
-  }
-
-  loggedInGuard(){
-    IsLoginGuard
-  }
   /**
    *
    * Actions
