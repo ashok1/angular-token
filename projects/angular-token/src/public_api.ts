@@ -14,6 +14,4 @@ export { ANGULAR_TOKEN_OPTIONS } from './lib/angular-token.token';
 
 export { AngularTokenService } from './lib/angular-token.service';
 
-export { AngularTokenModule } from './lib/angular-token.module';
-
-export { AuthGuard, IsLoginGuard } from './lib/angular-guard';
+export { AngularTokenModule } from './lib/angular-token.module'; 

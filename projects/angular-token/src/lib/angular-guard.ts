@@ -1,8 +1,10 @@
-import { inject } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { AngularTokenService } from './angular-token.service';
-import { catchError, map, of } from 'rxjs';
+import {  of } from 'rxjs';
+import { catchError, map } from 'rxjs/operators';
+
 
 export const AuthGuard = () => {
   const authService = inject(AngularTokenService);
