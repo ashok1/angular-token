@@ -8,9 +8,9 @@ export interface SignInData {
 }
 
 export interface RegisterData {
-  login: string;
+  login?: string;
   password: string;
-  passwordConfirmation: string;
+  passwordConfirmation?: string;
   name?: string;
   userType?: string;
 }
@@ -46,11 +46,11 @@ export interface ApiResponse {
 // State Data
 
 export interface AuthData {
-  accessToken: string;
-  client: string;
-  expiry: string;
-  tokenType: string;
-  uid: string;
+  accessToken: string | null;
+  client: string | null;
+  expiry: string | null;
+  tokenType: string | null;
+  uid: string | null;
 }
 
 export interface UserData {
@@ -106,9 +106,9 @@ export interface AngularTokenOptions {
   loginField?: string;
 
   oAuthBase?: string;
-  oAuthPaths?: { [key: string]: string; };
+  oAuthPaths?: { [key: string]: string };
   oAuthCallbackPath?: string;
   oAuthWindowType?: string;
-  oAuthWindowOptions?: { [key: string]: string; };
-  oAuthBrowserCallbacks?: { [key: string]: string; };
+  oAuthWindowOptions?: { [key: string]: string };
+  oAuthBrowserCallbacks?: { [key: string]: string };
 }
