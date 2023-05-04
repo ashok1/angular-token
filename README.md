@@ -29,5 +29,7 @@ After running a `npm run build:release` we'll need to create a release in github
 We can then use this new release using:
 
 ```sh
-npm i https://github.com/Telleroo/angular-token/releases/download/v15.2.7/angular-token.tar.gz
+npm run build:lib
+npm run build:release
+npm i https://github.com/ashok1/angular-token/releases/download/released/angular-token.tar.gz
 ```
