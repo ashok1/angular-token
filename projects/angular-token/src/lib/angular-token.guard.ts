@@ -1,4 +1,4 @@
-import { inject } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { AngularTokenService } from './angular-token.service';
@@ -52,3 +52,14 @@ export const IsLoginGuard = () => {
   }
   return router.parseUrl(authService.fetchSignInRedirect() || '');
 };
+
+@Injectable({
+  providedIn: 'root',
+  useFactory: () => ({
+    AuthGuard,
+    IsLoginGuard,
+  }),
+})
+export class AuthGuardService {
+  constructor() {}
+}
